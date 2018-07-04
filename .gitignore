@@ -1,0 +1,10 @@
+# TypeScript
+/src/**/*.js
+
+# node
+/node_modules/
+
+# other
+/.idea/
+*.lock
+*.log
