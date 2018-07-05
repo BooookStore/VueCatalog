@@ -1,4 +1,5 @@
 /* eslint-disable */
+const path = require('path');
 const common = require('./common');
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -36,7 +37,13 @@ module.exports = {
                 use: [
                     'vue-style-loader',
                     'css-loader',
-                    'sass-loader'
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            data: "@import 'global-imports.scss';",
+                            includePaths: [path.resolve(__dirname, '../src/style/')],
+                        }
+                    }
                 ]
             },
             {
