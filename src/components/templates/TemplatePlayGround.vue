@@ -20,11 +20,17 @@
 
 <style lang="scss" scoped>
 
+    $header-height: 50px;
+
     .container {
         display: grid;
-        grid-template-rows: 50px 1fr;
+        grid-template-rows: $header-height calc( 100vh - #{$header-height} );
         grid-template-columns: 250px 1fr;
-        grid-template-areas: "header header" "menu   main";
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+        grid-template-areas:
+                "header header"
+                "menu   main";
     }
 
     header {
@@ -35,6 +41,11 @@
     menu {
         background-color: #808080;
         grid-area: menu
+    }
+
+    main {
+        background-color: #808080;
+        grid-area: main;
     }
 
 </style>
