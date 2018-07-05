@@ -1,5 +1,9 @@
 <template>
-    <template-play-ground/>
+    <template-play-ground>
+        <h1 slot="header">This is header</h1>
+        <p>This is main</p>
+        <h5 slot="menu">This is menu</h5>
+    </template-play-ground>
 </template>
 
 <script lang="ts">
@@ -11,6 +15,9 @@
     }
 </script>
 
-<style scoped>
-
+<style>
+    body, header, menu, footer, p, h1, h2, h3, h4, h5 {
+        margin: 0;
+        padding: 0;
+    }
 </style>

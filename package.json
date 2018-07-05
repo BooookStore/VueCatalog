@@ -4,10 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "css-loader": "^0.28.11",
+    "typescript": "^2.9.2",
     "eslint": "^5.0.1",
     "eslint-config-google": "^0.9.1",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "css-loader": "^0.28.11",
+    "sass-loader": "^7.0.3",
     "ts-loader": "^4.4.2",
     "vue": "^2.5.16",
     "vue-loader": "^15.2.4",
@@ -21,8 +24,5 @@
   "scripts": {
     "start": "webpack-dev-server --open --config ./webpackconfig/webpack.dev.config.js",
     "build": "webpack --config ./webpackcpnfig/webpack.prod.config.js"
-  },
-  "dependencies": {
-    "typescript": "^2.9.2"
   }
 }
