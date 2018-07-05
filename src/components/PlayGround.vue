@@ -1,17 +1,35 @@
 <template>
     <template-play-ground>
-        <h1 slot="header">Vue Catalog</h1>
+        <organisms-header slot="header"/>
         <p>This is main</p>
-        <h5 slot="menu">This is menu</h5>
+        <molecule-list-column slot="menu" :items="items"/>
     </template-play-ground>
 </template>
 
 <script lang="ts">
     import TemplatePlayGround from "./templates/TemplatePlayGround";
+    import OrganismsHeader from "./organisms/OrganismsHeader";
+    import MoleculeListColumn, {Item} from "./molecules/MoleculeListColumn";
 
-    export default {
-        name: "PlayGround",
-        components: {TemplatePlayGround},
+    import {Vue, Component} from "vue-property-decorator";
+
+    @Component({
+        components: {MoleculeListColumn, OrganismsHeader, TemplatePlayGround}
+    })
+    export default class PlayGround extends Vue {
+        public data(): Object {
+
+            // モックデータ
+            const items: Item[] = [
+                new Item(1, "item1"),
+                new Item(2, "item2"),
+                new Item(3, "item3"),
+            ];
+
+            return {
+                items: items,
+            }
+        }
     }
 </script>
 

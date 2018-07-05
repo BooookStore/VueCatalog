@@ -19,7 +19,7 @@
 </script>
 
 <style lang="scss" scoped>
-    $header-height: 50px;
+    $header-height: 30px;
 
     .container {
         display: grid;
