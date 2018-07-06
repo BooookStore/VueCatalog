@@ -17,8 +17,9 @@
         components: {MoleculeListColumn, OrganismsHeader, TemplatePlayGround}
     })
     export default class PlayGround extends Vue {
-        public data(): Object {
 
+        // noinspection JSMethodCanBeStatic, JSUnusedGlobalSymbols
+        public data(): Object {
             // モックデータ
             const items: Item[] = [
                 new Item(1, "item1"),
