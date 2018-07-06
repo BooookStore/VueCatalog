@@ -15,9 +15,7 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.js', '.vue', '.json'],
-        alias: {
-            '@VueComponent': common.vueComponentBase,
-        },
+        modules: ['node_modules', 'src'],
     },
     module: {
         rules: [

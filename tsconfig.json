@@ -4,10 +4,19 @@
     "strict": true,
     "module": "es2015",
     "moduleResolution": "node",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "node_module/@types"
+    ],
+    "types": [
+      "node",
+      "mocha",
+      "chai"
+    ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "test/**/*.ts"
   ],
   "exclude": [
     "node_module"
