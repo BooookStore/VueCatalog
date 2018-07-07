@@ -1,8 +1,8 @@
 <template>
-    <a href="#" class="container" @click="$emit('click')">
+    <div class="container item" @click="$emit('click')">
         <i class="file icon"></i>
         <slot/>
-    </a>
+    </div>
 </template>
 
 <script lang="ts">
@@ -17,7 +17,7 @@
 <style scoped lang="scss">
     .container {
         padding: 5px;
-        text-decoration: none;
+        cursor: pointer;
     }
 
     .container:hover {
