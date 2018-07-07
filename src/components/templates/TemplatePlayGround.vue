@@ -3,9 +3,9 @@
         <header>
             <slot name="header"/>
         </header>
-        <menu>
+        <nav>
             <slot name="menu"/>
-        </menu>
+        </nav>
         <main>
             <slot/>
         </main>
@@ -37,7 +37,7 @@
         grid-area: header;
     }
 
-    menu {
+    nav {
         background-color: #ffffff;
         grid-area: menu
     }
