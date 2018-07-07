@@ -10,12 +10,13 @@
     export default class MoleculeListColumn extends Vue {
         @Prop({required: true}) items!: Item[];
 
+        // noinspection JSUnusedGlobalSymbols
         public render(createElement: any): VNode {
             return createElement(
                 "div",
                 {
                     attrs: {
-                        class: "container ui list",
+                        class: "container ui relaxed list",
                     }
                 },
                 [
