@@ -4,7 +4,11 @@
 # node
 /node_modules/
 
+# dist
+/**/dist/
+
 # other
 /.idea/
 *.lock
 *.log
+*lock.json

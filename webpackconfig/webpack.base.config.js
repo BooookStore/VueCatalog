@@ -1,10 +1,12 @@
 /* eslint-disable */
 const path = require('path');
 const common = require('./common');
+const webpack = require('webpack');
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// noinspection JSUnresolvedFunction
 module.exports = {
     entry: {
         index: './src/index.ts',
@@ -35,13 +37,7 @@ module.exports = {
                 use: [
                     'vue-style-loader',
                     'css-loader',
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            data: "@import 'global-imports.scss';",
-                            includePaths: [path.resolve(__dirname, '../src/style/')],
-                        }
-                    }
+                    'sass-loader',
                 ]
             },
             {
@@ -52,6 +48,11 @@ module.exports = {
                     appendTsSuffixTo: [/\.vue$/],
                 },
             },
+            {
+                // for semantic-ui configuration
+                test: /\.(eot|svg|ttf|woff|woff2|png)$/,
+                loader: 'file-loader?name=semantic/dist/themes/default/assets/fonts/[name].[ext]'
+            }
         ],
     },
     plugins: [
@@ -60,5 +61,9 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
     ],
 };

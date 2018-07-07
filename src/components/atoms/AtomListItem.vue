@@ -1,5 +1,6 @@
 <template>
     <a href="#" class="container" @click="$emit('click')">
+        <i class="file icon"></i>
         <slot/>
     </a>
 </template>

@@ -36,8 +36,4 @@
 </script>
 
 <style lang="scss">
-    /* load import style */
-    body {
-        background-color: $section-separate-color;
-    }
 </style>
