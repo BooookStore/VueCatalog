@@ -25,6 +25,7 @@
                 new Item(1, "item1"),
                 new Item(2, "item2"),
                 new Item(3, "item3"),
+                new Item(4, "item4", [new Item(1, "child")]),
             ];
 
             return {
@@ -36,4 +37,7 @@
 
 <style lang="scss">
     /* load import style */
+    body {
+        background-color: $section-separate-color;
+    }
 </style>

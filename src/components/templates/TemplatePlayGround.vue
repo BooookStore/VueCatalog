@@ -33,17 +33,17 @@
     }
 
     header {
-        background-color: #808080;
+        background-color: #ffffff;
         grid-area: header;
     }
 
     menu {
-        background-color: #808080;
+        background-color: #ffffff;
         grid-area: menu
     }
 
     main {
-        background-color: #808080;
+        background-color: #ffffff;
         grid-area: main;
     }
 
