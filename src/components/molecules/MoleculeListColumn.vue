@@ -15,7 +15,7 @@
                 "div",
                 {
                     attrs: {
-                        class: "container",
+                        class: "container ui list",
                     }
                 },
                 [
