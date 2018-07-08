@@ -20,8 +20,8 @@
                     }
                 },
                 [
-                    this.createListItems(createElement),
                     this.createListItemGroup(createElement),
+                    this.createListItems(createElement),
                 ]
             );
         }

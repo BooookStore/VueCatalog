@@ -1,7 +1,9 @@
 <template>
-    <div class="container item" @click="$emit('click')">
-        <i class="file icon"></i>
-        <slot/>
+    <div class="container" @click="$emit('click')">
+        <div class="item">
+            <i class="file icon"></i>
+            <slot/>
+        </div>
     </div>
 </template>
 

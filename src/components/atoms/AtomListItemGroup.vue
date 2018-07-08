@@ -1,7 +1,10 @@
 <template>
-    <a href="#" class="container" @click="$emit('click')">
-        <slot/> [this is group]
-    </a>
+    <div class="container" @click="$emit('click')">
+        <div class="item">
+            <i class="folder icon"></i>
+            <slot/>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -16,11 +19,10 @@
 <style scoped lang="scss">
     .container {
         padding: 5px;
-        color: #000;
-        text-decoration: none;
+        cursor: pointer;
     }
 
     .container:hover {
-        background-color: #c8c8c8;
+        background-color: #dcdcdc;
     }
 </style>
